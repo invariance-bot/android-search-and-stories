@@ -863,7 +863,8 @@ public class DuckDuckGo extends AppCompatActivity {
     }
 
     public void feedItemSelected(String feedId) {
-        // TODO: fill in function body 
+        FeedObject feedObject = DDGApplication.getDB().selectFeedById(feedId);
+        feedItemSelected(feedObject);
     }
 
 	@Override
